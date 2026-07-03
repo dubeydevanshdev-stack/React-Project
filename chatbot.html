@@ -34,6 +34,7 @@
 
       .chat-input-container{
         display: flex;
+        margin-bottom: 60px;
 
       }
 
@@ -43,6 +44,8 @@
        margin-right: auto;
 
        height: 100vh;
+       display: flex;
+       flex-direction:column;
       }
 
       .chat-message-user{
@@ -70,6 +73,14 @@
       .chat-message-profile{
         width: 45px;
       }
+
+      .chat-message-container{
+        flex-grow: 1;
+        margin-top: 20px;
+        overflow: scroll;
+        scrollbar-width: none;
+      }
+
 
 
 
@@ -174,7 +185,7 @@
       function ChatMessages({chatMessages}){
 
         return (
-          <>
+          <div className="chat-message-container">
 
             {chatMessages.map((chatMessage)=>{
             return (
@@ -185,7 +196,7 @@
             />
             );
            })}
-          </>
+          </div>
         );
       }
 
