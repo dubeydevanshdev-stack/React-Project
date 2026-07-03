@@ -3,6 +3,11 @@
   <head>
     <title>React Basics</title>
     <style>
+
+      body{
+        font-family: Arial;
+      }
+
       .send-button {
         background-color: rgb(25, 135, 84);
         color: white;
@@ -39,6 +44,22 @@
       .chat-message-user{
         display: flex;
         justify-content: end;
+        align-items: start;
+      }
+
+      .chat-message-robot{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+      }
+
+      .chat-message-text{
+        background-color: rgb(238,238,238);
+        padding: 15px 20px;
+        border-radius: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 20px;
       }
 
 
@@ -130,7 +151,7 @@
             {sender==='robot' && (
               <img src="robot.png" width="50"></img>
             )}
-            <div>
+            <div className="chat-message-text">
            {message}
            </div>
            {sender==='user' &&  (
